@@ -46,7 +46,7 @@ function removeFromCart(item) {
   if (i === cart.length) {
     return "That item is not in your cart.";
   }
-  setCart( [...cart.slice(0, i), ...cart.slice(i + 1));
+  setCart( [...cart.slice(0, i), ...cart.slice(i + 1)]);
   return cart;
 }
 
