@@ -40,7 +40,12 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  for (var i = 0; cart[i].itemName !== item; i++);
+  for (var i = 0;
+      i < cart.length && cart[i].itemName !== item;
+      i++);
+  if (i === cart.length) {
+    return "That item is not in your cart.";
+  }
   setCart( [...cart.slice(0, i), ...cart.slice(i + 1));
 }
 
