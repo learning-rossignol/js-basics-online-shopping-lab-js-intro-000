@@ -30,7 +30,7 @@ function viewCart() {
                         : '.');
     report += ` ${cart[i].itemName} at ${cart[i].itemPrice}${connector}`;
   }
-  return report;
+  return `${report}.`;
 }
 
 function total() {
