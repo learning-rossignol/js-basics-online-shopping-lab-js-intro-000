@@ -25,9 +25,9 @@ function viewCart() {
   for (let i = 0; i < cart.length; i++) {
     let connector = (i === cart.length - 1 && cart.length > 1)
                     ? ', and '
-                    : ((i < cart.length - 1)
-                        ? ', '
-                        : '.');
+                    : ((i === cart.length - 1)
+                        ? '.'
+                        : ', ');
     report += ` ${cart[i].itemName} at ${cart[i].itemPrice}${connector}`;
   }
   return `${report}.`;
