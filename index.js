@@ -24,7 +24,7 @@ function viewCart() {
   var report = "In your cart, you have";
   for (let i = 0; i < cart.length; i++) {
     let connector = (i === cart.length - 1)
-                    ? ' and '
+                    ? ', and '
                     : ((i < cart.length - 1)
                         ? ', '
                         : '.');
