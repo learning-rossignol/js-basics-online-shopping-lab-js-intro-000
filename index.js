@@ -18,11 +18,12 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var pfx = "In your cart, you have";
+  var report = "In your cart, you have";
   for (let i = 0; i < cart.length; i++) {
     let interpolated = (i < cart.length - 1) ? ',' : '.';
-    pfx += ` ${cart[i].itemName} at ${cart[i].itemPrice}${interpolated}`;
+    report += ` ${cart[i].itemName} at ${cart[i].itemPrice}${interpolated}`;
   }
+  return report;
 }
 
 function total() {
