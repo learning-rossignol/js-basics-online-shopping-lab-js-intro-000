@@ -23,7 +23,11 @@ function viewCart() {
   }
   var report = "In your cart, you have";
   for (let i = 0; i < cart.length; i++) {
-    let interpolated = (i < cart.length - 1) ? ',' : '.';
+    let connector = (i === cart.length - 1)
+                    ? ' and '
+                    : ((i < cart.length - 1)
+                        ? ', '
+                        : '.');
     report += ` ${cart[i].itemName} at ${cart[i].itemPrice}${interpolated}`;
   }
   return report;
