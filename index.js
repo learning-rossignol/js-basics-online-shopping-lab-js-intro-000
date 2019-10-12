@@ -40,6 +40,8 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  for (var i = 0; cart[i].itemName !== item; i++);
+  setCart( [...cart.slice(0, i), ...cart.slice(i + 1));
 }
 
 function placeOrder(cardNumber) {
