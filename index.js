@@ -27,7 +27,7 @@ function viewCart() {
                     ? ', and'
                     : ((i === cart.length - 1)
                         ? '.'
-                        : ', ');
+                        : ',');
     report += ` ${cart[i].itemName} at $${cart[i].itemPrice}${connector}`;
   }
   return `${report}`;
